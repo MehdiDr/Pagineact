@@ -16,6 +16,7 @@ const range = (from, to, step = 1) => {
 
 export default class Pagination extends Component {
 
+
   // Need to find a way to destructuring without using constructor (who isn't needed)
   constructor(props) {
     super(props);
@@ -93,6 +94,12 @@ export default class Pagination extends Component {
         case (!hasLeftSpill && hasRightSpill): {
           const extraPages = range(endPage + 1, endPage + spillOffset);
           pages = [...pages, ...extraPages, RIGHT_PAGE];
+          break;
+        }
+
+        case (hasLeftSpill && hasRightSpill):
+        default: {
+          pages = [LEFT_PAGE, ...pages, RIGHT_PAGE];
           break;
         }
       }

@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import Flag from 'react-flags';
 
@@ -12,7 +10,7 @@ const divContainerStyle = {
 };
 
 const spanStyle = {
-  display: 'block',
+	display: 'block',
 	textColor: 'dark',
 	fontWeight: 'bold',
 };

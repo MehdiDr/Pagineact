@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Countries from 'countries-api';
+import './App.css';
 
 import CountryCard from './components/CountryCards';
 import Pagination from './components/Pagination';
